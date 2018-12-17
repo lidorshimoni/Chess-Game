@@ -1,17 +1,9 @@
 ﻿  Bishop.cpp
-  Board.cpp
-c:\users\user\desktop\visual studio projects\chess\chess\board.cpp(41): warning C4305: 'argument': truncation from 'int' to 'char'
-c:\users\user\desktop\visual studio projects\chess\chess\board.cpp(41): warning C4309: 'argument': truncation of constant value
-  Game.cpp
-  King.cpp
-  Knight.cpp
   Pawn.cpp
-  Piece.cpp
-  Position.cpp
   Queen.cpp
   Rook.cpp
-  Source.cpp
-  stdafx.cpp
   Generating Code...
-c:\users\user\desktop\visual studio projects\chess\chess\game.cpp(70): warning C4715: 'Game::findKing': not all control paths return a value
-  Chess.vcxproj -> C:\Users\user\Desktop\Visual Studio Projects\Chess\Debug\Chess.exe
+c:\users\user\desktop\visual studio projects\chess\chess\rook.cpp(56): error C4716: 'Rook::getLeaglMoves': must return a value
+c:\users\user\desktop\visual studio projects\chess\chess\queen.cpp(15): error C4716: 'Queen::getLeaglMoves': must return a value
+c:\users\user\desktop\visual studio projects\chess\chess\pawn.cpp(30): error C4716: 'Pawn::getLeaglMoves': must return a value
+c:\users\user\desktop\visual studio projects\chess\chess\bishop.cpp(66): error C4716: 'Bishop::getLeaglMoves': must return a value

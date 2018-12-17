@@ -43,7 +43,7 @@ Board::Board(string board)
 		default:
 			piece = nullptr;
 		}
-		_board[y][x] = piece;
+		this->_board[y][x] = piece;
 	}
 }
 
@@ -53,7 +53,7 @@ Board::~Board()
 	{
 		for (int j = 0; j < SIZE; j++)
 		{
-			delete _board[i][j];
+			delete this->_board[i][j];
 		}
 	}
 }
@@ -65,23 +65,25 @@ string Board::toStr()
 	{
 		for (int j = 0; j < SIZE; j++)
 		{
-			if (_board[i][j] == nullptr)
+			if (this->_board[i][j] == nullptr)
 			{
 				output += '#';
 			}
 			else
 			{
-				output += _board[i][j]->getType();
+				output += this->_board[i][j]->getType();
 			}
 		}
 	}
 	return output;
 }
 
-Piece* Board::operator[](Position pos) {
-	return _board[pos.getY()][pos.getX()];
+Piece* Board::operator[](Position pos) 
+{
+	return this->_board[pos.getY()][pos.getX()];
 }
 
-void Board::set(Position place, Piece* argument) {
-	_board[place.getY()][place.getX()] = argument;
+void Board::set(Position place, Piece* argument) 
+{
+	this->_board[place.getY()][place.getX()] = argument;
 }
