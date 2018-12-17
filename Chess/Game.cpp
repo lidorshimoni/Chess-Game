@@ -28,7 +28,7 @@ int Game::makeTurn(string move)
 	Position dest = strToPoint(move.substr(2, 2));
 
 	Piece* test = (*board)[src];
-	if ((*board)[src] == nullptr || (*board)[src]->getColor() != turn)
+	if ((*this->board)[src] == nullptr || (*this->board)[src]->getColor() != this->turn)
 	{
 		return 2;
 	}
@@ -36,20 +36,20 @@ int Game::makeTurn(string move)
 	//Create vector of all enemy legal moves and check if the king is in them, after the possible move (use backup)
 	
 
-	int code = (*board)[src]->move(dest);
-	if (code == 0 && findKing(turn == 0 ? 1 : 0)->isCheck()) 
+	int code = (*this->board)[src]->move(dest);
+	if (code == 0 && this->findKing(turn == 0 ? 1 : 0)->isCheck()) 
 	{
 		code = 1;
 	}
-	if ((code == 0 || code == 1) && findKing(turn)->isCheck())
+	if ((code == 0 || code == 1) && this->findKing(turn)->isCheck())
 	{
-		board->set(src, (*board)[dest]);
-		board->set(dest, nullptr);
+		this->board->set(src, (*this->board)[dest]);
+		this->board->set(dest, nullptr);
 		code = 4;
 	}
 	if (code == 0 || code == 1)
 	{
-		turn = turn == 0 ? 1 : 0;
+		this->turn = this->turn == 0 ? 1 : 0;
 	}
 	return code;
 }
@@ -60,10 +60,10 @@ King* Game::findKing(int color)
 	{
 		for (int x = 0; x < SIZE; x++)
 		{
-			Piece* piece = (*board)[Position(x, y)];
+			Piece* piece = (*this->board)[Position(x, y)];
 			if (piece != nullptr && piece->getType() == 'k' && piece->getColor() == color)
 			{
-				return dynamic_cast<King*>((*board)[Position(x, y)]);
+				return dynamic_cast<King*>((*this->board)[Position(x, y)]);
 			}
 		}
 	}
