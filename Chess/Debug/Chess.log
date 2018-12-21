@@ -1,9 +1,5 @@
-﻿  Bishop.cpp
+﻿  Rook.cpp
   Pawn.cpp
-  Queen.cpp
-  Rook.cpp
+  Bishop.cpp
   Generating Code...
-c:\users\user\desktop\visual studio projects\chess\chess\rook.cpp(56): error C4716: 'Rook::getLeaglMoves': must return a value
-c:\users\user\desktop\visual studio projects\chess\chess\queen.cpp(15): error C4716: 'Queen::getLeaglMoves': must return a value
-c:\users\user\desktop\visual studio projects\chess\chess\pawn.cpp(30): error C4716: 'Pawn::getLeaglMoves': must return a value
-c:\users\user\desktop\visual studio projects\chess\chess\bishop.cpp(66): error C4716: 'Bishop::getLeaglMoves': must return a value
+c:\users\user\desktop\chess\chess\rook.cpp(56): error C4716: 'Rook::getLeaglMoves': must return a value
