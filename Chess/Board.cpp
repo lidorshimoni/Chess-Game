@@ -37,8 +37,8 @@ Board::Board(string board)
 		case 'b':
 			piece = new Bishop(point, 'b', color, this);
 			break;
-		case 'pos':
-			piece = new Pawn(point, 'pos', color, this);
+		case 'p':
+			piece = new Pawn(point, 'p', color, this);
 			break;
 		default:
 			piece = nullptr;
